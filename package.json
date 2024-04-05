@@ -1,0 +1,27 @@
+{
+  "name": "http-dragon",
+  "version": "1.0.0",
+  "description": "For handling http request.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishalsofttech/http-dragon.git"
+  },
+  "keywords": [
+    "http",
+    "http-module",
+    "http-dragon"
+  ],
+  "author": "vishal sahu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishalsofttech/http-dragon/issues"
+  },
+  "homepage": "https://github.com/vishalsofttech/http-dragon#readme",
+  "dependencies": {
+    "axios": "^1.6.8"
+  }
+}

@@ -29,3 +29,47 @@ request.call({
  }
 })
 ```
+
+
+## Handling Request In React.js
+
+This hook fetches initial data from an API and re-fetches when its dependencies change. It returns loading, error, and data states.
+
+```javascript
+import {useRequest,http,Http} from "http-dragon"
+
+const request = http.get(Http.apis.getInitialData)
+
+function RequestExample() {
+ const [loading,error,data] = useRequest(request,{dependencies:[]})
+ //todo
+}
+```
+## Pipe function 
+
+Pipe uses to transform the the response that get from api. and execute  operators functions.
+
+```
+The map operator only works with responses in array format.
+```
+
+```javascript
+import {Http,http,Operators} from "http-dragon"
+
+const request = http.get(Http.apis.nameOfApi)
+request.setPipe(Operators.map(el=>{
+ el.fullName = el.name + el.lastName
+}))
+
+request.call({
+ next:(transformedData)=>{
+ //todo
+ },
+ error:(error)=>{
+  //todo
+ }
+ raw:(fullResponse)=>{
+  //todo
+ }
+})
+``` 

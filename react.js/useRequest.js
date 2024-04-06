@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-export const useRequest = (request, { dependcies }) => {
+export const useRequest = (request, { dependencies }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
-  
+
   useEffect(() => {
     setLoading(true);
     request.call({
@@ -17,7 +17,7 @@ export const useRequest = (request, { dependcies }) => {
         setError(err);
       },
     });
-  }, dependcies);
+  }, dependencies);
 
-  return [loading,error,data];
+  return [loading, error, data];
 };

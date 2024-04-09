@@ -30,6 +30,7 @@ export class Get {
   };
 
   #pipeRunner = (responseData) => {
+    responseData = JSON.parse(responseData)
     if (this.#pipes.length > 0) {
       for (let pipeMethod of this.#pipes) {
         responseData = pipeMethod(responseData);
@@ -54,7 +55,7 @@ export class Get {
         headers: this.#headers,
       });
 
-      const data = this.#pipeRunner(response.data);
+      const data = this.#pipeRunner(JSON.stringify(response.data));
       if (data === null) {
         next(response);
         raw(response);

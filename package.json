@@ -1,6 +1,6 @@
 {
   "name": "http-dragon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "For handling http request.",
   "main": "index.js",
   "scripts": {
